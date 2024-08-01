@@ -4,11 +4,54 @@ body{
     box-sizing: content-box;
     /*background-color: brown; */
     font-family: "Urbanist", sans-serif;
-    color: #510b34;
+    color: #4c0a30;
     background-color: eeeff1;
+    background: #d9a7c7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 a{
   color: #aa5d98;  
   text-decoration: none;
-
 }
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  height: 80px;
+}
+
+nav .left a{
+color: black;
+font-size: 25px;
+font-weight: 600;
+}
+
+nav .right a{
+  color: rgb(40, 6, 127);
+  font-size: 22px;
+  }
+
+  nav .right a p{
+    color: rgb(40, 6, 127);
+    font-size: 15px;
+  }
+ /*Estilos a mi etiqueta section con clase "about me" */
+
+ .about-me{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  }
+
+  .about-me .profile img{
+    border-radius: 50%;
+    width: 200px; /*largo-ancho */
+    height: 200px;/*altura */
+    padding: 10px;
+
+  }
