@@ -2,5 +2,13 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: content-box;
-    background-color: brown;
+    /*background-color: brown; */
+    font-family: "Urbanist", sans-serif;
+    color: #3b0424;
+    background-color: eeeff1;
+}
+a{
+  color: #d72caf;  
+  text-decoration: none;
+
 }
