@@ -1,15 +1,27 @@
-body{
+/* 
+  Este bloque de CSS afecta a todos los elementos HTML en la página,
+  indicados por el asterisco "*".  quitando los estilos por defecto del
+  navegador web
+  */
+  * {
+
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
+    box-sizing: border-box;
+  } 
+
+  /*  Activa el desplazamiento suave para la página. */
+html {
+  scroll-behavior: smooth;
+}
+body{
     /*background-color: brown; */
     font-family: "Urbanist", sans-serif;
-    color: #4c0a30;
-    background-color: eeeff1;
-    background: #d9a7c7;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    color: #65256d;
+    background-color: eeeff1; /* fallback for old browsers */
+    background: #85185d;  
+    background: -webkit-linear-gradient(to right, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fffcdc, #d9a7c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 a{
   color: #a95c97;  
@@ -17,41 +29,140 @@ a{
 }
 
 nav{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 50px;
-  height: 80px;
-}
-
-nav .left a{
-color: black;
-font-size: 25px;
-font-weight: 600;
-}
-
-nav .right a{
-  color: rgb(40, 6, 127);
-  font-size: 22px;
-  }
-
-  nav .right a p{
-    color: rgb(40, 6, 127);
-    font-size: 15px;
-  }
- /*Estilos a mi etiqueta section con clase "about me" */
-
- .about-me{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px;
-  }
-
-  .about-me .profile img{
-    border-radius: 50%;
-    width: 200px; /*largo-ancho */
-    height: 200px;/*altura */
-    padding: 10px;
-
-  }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+ 
+ nav .left a {
+   color: #821240;
+   font-size: 40px;
+   font-weight: 600;
+ }
+ 
+ nav .right a {
+   color: #771660;
+   font-size: 22px;
+   margin: 0 10px;
+ }
+ 
+ 
+ nav .right a:last-child {
+     color: #eeeff1;
+     background-color: #871c51;
+     padding: 5px 15px;
+     border-radius: 5px;
+   }
+ 
+ 
+ nav .right a span {
+   font-size: 15px;
+   margin-left: 5px;
+ }
+ /* estilos a mi etiqueta section con class="about-me"*/
+ .about-me {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0 50px;
+     margin: 50px 0;
+     margin-bottom: 100px;
+     gap: 40px;
+ }
+ 
+ .about-me .text{
+   flex: 5;
+ }
+ 
+ .about-me .text h1 {
+   font-size: 45px;
+ }
+ 
+ .about-me .text span {
+   font-size: 20px;
+   color: #94189d;
+   font-weight: 500;
+ }
+ 
+  .about-me .text .links{
+   margin-top: 20px;
+ }
+ 
+ .about-me .text .links a {
+   display: inline-block;
+   padding: 5px 10px;
+   border: 2px solid #4e0f54;
+   border-radius: 10px;
+   margin-right: 10px;
+   margin-bottom: 10px;
+   transition: .5s
+ }
+ 
+ /* aplicamos una pseudoclase */
+ .about-me .text .links a:hover {
+   color: #ffffff;
+   border: 2px solid #fff;
+   background-color: #781049;
+   cursor: pointer;
+ }
+ 
+ .about-me .text .links span:hover {
+   color: #ffffff;
+ }
+ 
+ .about-me .profile {
+   flex: 2;
+   display: flex;
+   justify-content: right;
+   /* border-color: #1a1c20;
+   border-style: double; */
+ }
+ 
+ .about-me .profile img {
+   border-radius: 50%;
+   width: 350px; /* largo - ancho */
+   height: 350px; /* altura */
+   padding: 20px;
+ }
+ 
+ .habilidades{
+   padding: 0 50px;
+   margin-bottom: 100px;
+ }
+ 
+ .habilidades h2 {
+   text-align: center;
+   font-size: 40px;
+ }
+ 
+ .habilidades .text {
+   text-align: center;
+   margin-bottom: 20px;
+ }
+ 
+ .habilidades .celdas{
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+ 
+ .habilidades .celdas .celda {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 200px;
+   padding: 10px 20px;
+   margin: 10px;
+   border: 2px solid #fff;
+   border-radius: 10px;
+ }
+ 
+ .habilidades .celdas .celda img{
+   width: 60px;
+   height: 70px;
+   border-radius: 3px;
+ }
+ 
+ .habilidades .celdas .celda span{
+  font-size: 19px;
+ }
